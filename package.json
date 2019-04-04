@@ -1,0 +1,31 @@
+{
+  "name": "ts-babel-tslint-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "files": ["dist/src/**/*"],
+  "scripts": {
+    "lint-staged": "lint-staged",
+    "tsc": "tsc",
+    "test": "jest",
+    "babel": "babel src --out-dir dist/src --extensions .ts",
+    "build": "npm run lint-staged && npm run tsc && npm run test && npm run babel",
+    "pack": "npm pack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.11",
+    "babel-core": "^7.0.0-bridge.0",
+    "jest": "^24.7.0",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "tslint": "^5.15.0",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.1"
+  }
+}
