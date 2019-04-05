@@ -4,11 +4,17 @@
     "module": "commonjs",
     "declaration": true,
     "emitDeclarationOnly": true,
-    "outDir": "./dist",
+    "outFile": "./dist/src/sample.d.ts",
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "listFiles": true
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/**/*"
+  ]
 }

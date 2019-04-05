@@ -2,14 +2,18 @@
   "name": "ts-babel-tslint-jest",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/src/index.js",
-  "files": ["dist/src/**/*"],
+  "main": "dist/src/sample.js",
+  "types": "dist/src/sample.d.ts",
+  "files": [
+    "dist/src/**/*"
+  ],
   "scripts": {
-    "lint-staged": "lint-staged",
+    "prettier": "prettier src/**/* test/**/* --write",
+    "tslint": "tslint -c tslint.json 'src/**/*.ts,test/**/*' --fix",
     "tsc": "tsc",
     "test": "jest",
     "babel": "babel src --out-dir dist/src --extensions .ts",
-    "build": "npm run lint-staged && npm run tsc && npm run test && npm run babel",
+    "build": "npm run prettier && npm run tslint && npm run tsc && npm run test && npm run babel",
     "pack": "npm pack"
   },
   "author": "",
@@ -21,8 +25,7 @@
     "@babel/preset-typescript": "^7.3.3",
     "@types/jest": "^24.0.11",
     "babel-core": "^7.0.0-bridge.0",
-    "jest": "^24.7.0",
-    "lint-staged": "^8.1.5",
+    "jest": "^24.7.1",
     "prettier": "^1.16.4",
     "tslint": "^5.15.0",
     "tslint-config-prettier": "^1.18.0",

@@ -11,11 +11,10 @@ Typescript compiler only used for code editing. Babel is solely responsible for 
 npm run build
 ```
 Does the following:
-1. Runs lint-staged that:
-   - Runs prettier
-   - Runs tslint
-2. Runs tsc to compile all typescript. It writes only declaration files to the dist folder
-3. Runs babel to transpile into dist folder (using @babel/typescript preset)
+1. Runs prettier
+2. Runs tslint
+3. Runs tsc to compile all typescript. It writes only declaration files to the dist folder
+4. Runs babel to transpile into dist folder (using @babel/typescript preset)
 
 ### Targeting browsers
 
@@ -29,4 +28,4 @@ See [browserslist](https://github.com/browserslist/browserslist) for more detail
 - https://github.com/palantir/tslint
 - https://github.com/prettier/prettier
 - https://github.com/alexjoverm/tslint-config-prettier
-- https://github.com/okonet/lint-staged
+
